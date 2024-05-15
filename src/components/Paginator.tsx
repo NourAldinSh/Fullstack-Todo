@@ -36,7 +36,7 @@ const Paginator = ({ page = 1, pageCount, total, isLoading, onClickPrev, onClick
         <button
           type="button"
           className="bg-gray-800 text-white rounded-r-md py-2 border-l border-gray-200 hover:bg-indigo-700 duration-300 hover:text-white px-3 disabled:bg-gray-400 disabled:hover:bg-gray-400 disabled:cursor-not-allowed"
-          disabled={page === pageCount || isLoading}
+          disabled={page === pageCount || isLoading || page > pageCount}
           onClick={onClickNext}
         >
           <div className="flex flex-row align-middle">
